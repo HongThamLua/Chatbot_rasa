@@ -1,6 +1,52 @@
 version: "3.1"
+
 rules:
-  - rule: Provide chapter detail
+  - rule: Phản hồi lời chào
     steps:
-      - intent: ask_chapter_detail
-      - action: action_fetch_chapter_detail
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Phản hồi lời tạm biệt
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Cung cấp thông tin chương và gợi ý câu hỏi
+    steps:
+      - intent: ask_chapter
+      - action: action_fetch_chapter_and_suggest_topics
+
+  - rule: Cung cấp chi tiết chủ đề
+    steps:
+      - intent: ask_topics
+      - action: action_fetch_topic_details
+
+  - rule: Cung cấp chi tiết tiểu chủ đề
+    steps:
+      - intent: ask_subtopic
+      - action: action_fetch_subtopic_details
+
+  - rule: Cung cấp ứng dụng của tiểu chủ đề
+    steps:
+      - intent: ask_application
+      - action: action_fetch_application_details
+
+  - rule: Cung cấp điều kiện của tiểu chủ đề
+    steps:
+      - intent: ask_conditions
+      - action: action_fetch_subtopic_conditions
+
+  - rule: Cung cấp mô tả chi tiết của tiểu chủ đề
+    steps:
+      - intent: ask_details
+      - action: action_fetch_subtopic_details_description
+
+  - rule: Cung cấp mối quan hệ của tiểu chủ đề
+    steps:
+      - intent: ask_characteristics
+      - action: action_fetch_subtopic_characteristics
+
+  - rule: Cung cấp ví dụ cụ thể của tiểu chủ đề
+    steps:
+      - intent: ask_example
+      - action: action_fetch_example_details

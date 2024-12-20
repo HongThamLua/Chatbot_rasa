@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import requests
-
+#giao diện người dùng
 app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])

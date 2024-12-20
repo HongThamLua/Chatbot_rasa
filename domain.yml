@@ -2,38 +2,55 @@ version: "3.1"
 
 intents:
   - greet
-  - fallback
-  - ask_information
+  - goodbye
+  - ask_chapter
+  - ask_topics
+  - ask_subtopic
+  - ask_conditions
+  - ask_details
+  - ask_characteristics
+  - ask_application
+  - ask_example
 
 entities:
-  - subtopic
+  - chapter_id
+  - topic_name
+  - subtopic_name
 
 slots:
-  subtopic:
+  chapter_id:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: subtopic
-        role: null
+        entity: chapter_id
+  topic_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: topic_name
 
 actions:
-  - action_fetch_chapter_detail
-  - action_ask_openai
-  - action_fetch_information
+  - utter_greet
+  - utter_goodbye
+  - action_fetch_chapter_and_suggest_topics
+  - action_fetch_topic_details
+  - action_fetch_subtopic_details
+  - action_fetch_application_details
+  - action_fetch_subtopic_conditions
+  - action_fetch_subtopic_details_description
+  - action_fetch_subtopic_characteristics
+  - action_fetch_example_details
 
 responses:
   utter_greet:
-    - text: "Hello! How can I assist you?"
-  utter_no_data:
-    - text: "Sorry, I couldn't find the information you requested."
-  utter_ask_subtopic:
-    - text: "Can you please specify the subtopic you want details about?"
-  utter_ask_information:
-    - text: "What specific topic or subtopic would you like to know about?"
-  utter_no_information:
-    - text: "I'm sorry, I couldn't find any information about '{subtopic}'. Please try asking about another topic."
+    - text: "Chào bạn! Tôi có thể giúp gì cho bạn hôm nay?"
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_goodbye:
+    - text: "Tạm biệt! Hẹn gặp lại bạn."
+
+  utter_no_data:
+    - text: "Tôi không tìm thấy dữ liệu phù hợp."
+
+

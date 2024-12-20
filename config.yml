@@ -8,43 +8,45 @@ assistant_id: 20241031-142610-vintage-dado
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+language: vi
 
 pipeline:
  # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
  # If you'd like to customize it, uncomment and adjust the pipeline.
  # See https://rasa.com/docs/rasa/tuning-your-model for more information.
-   - name: WhitespaceTokenizer
-   - name: RegexFeaturizer
-   - name: LexicalSyntacticFeaturizer
-   - name: CountVectorsFeaturizer
-   - name: CountVectorsFeaturizer
-     analyzer: char_wb
-     min_ngram: 1
-     max_ngram: 4
-   - name: DIETClassifier
+   - name: WhitespaceTokenizer #phn tah câu của nời dùng thành các token (từ, cụm t)
+     case_sensitive: False #không phân bệt chữ hoa chữ thờng
+   - name: RegexFeaturizer #xử lí nhận diện các mẫu regex: sdt, email
+ #  - name: LexicalSyntacticFeaturizer
+   - name: CountVectorsFeaturizer #biên đổi token thành các vector dựa trên số lần xuất hiện trong câu
+     analyzer: "word" #phân tích ở mức từ
+   - name: CountVectorsFeaturizer #thành vector dựa trên kí tự con
+     analyzer: "char_wb" #phan tich ở mức kí tự trong từ
+     min_ngram: 1 # 1 kí tự
+     max_ngram: 4 # 4 kí tự
+   - name: DIETClassifier #mô hình chính trong Rasa để nhâ dienj ý định v trích xuất thực thể
+     epochs: 100 #số lần duyệt qua toàn b tập dữ liệu trong quá trình huẫn luyện
+     constrain_similarities: true #hạn cế độ tương đồng giữa các intent trong khong gian vector
+   - name: EntitySynonymMapper #anh xa các từ ồng nghĩa về 1 thực thể thống nhất
+   - name: ResponseSelector #xử lí các phản hồi được chọn trước
      epochs: 100
      constrain_similarities: true
-   - name: EntitySynonymMapper
-   - name: ResponseSelector
-     epochs: 100
-     constrain_similarities: true
-   - name: FallbackClassifier
-     threshold: 0.3
-     ambiguity_threshold: 0.1
+   - name: FallbackClassifier #xác định khi nào chatbot không tể hiểu người dùng và thực hiện fall back
+     threshold: 0.3 #n độ t tin của intent thấp hơn 0.3, sẽ kích hoạt fallback
+     ambiguity_threshold: 0.1 #nếu các intent có độ tự tin ần nhau (sai biệt<0.1) sẽ kích hoạt fallback
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
-policies: null
+policies:
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
-#   - name: MemoizationPolicy
-#   - name: RulePolicy
-#   - name: UnexpecTEDIntentPolicy
-#     max_history: 5
-#     epochs: 100
-#   - name: TEDPolicy
-#     max_history: 5
-#     epochs: 100
-#     constrain_similarities: true
+   - name: MemoizationPolicy
+   - name: RulePolicy
+   - name: UnexpecTEDIntentPolicy
+     max_history: 5
+     epochs: 100
+   - name: TEDPolicy
+     max_history: 5
+     epochs: 100
+     constrain_similarities: true

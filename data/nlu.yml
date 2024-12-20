@@ -3,60 +3,66 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Chào
+    - Xin chào
+    - Hello
+    - Hi
+    - Chào buổi sáng
+    - Chào buổi tối
 
 - intent: goodbye
   examples: |
-    - cu
-    - good bye
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - Tạm biệt
+    - Hẹn gặp lại
+    - Bye
+    - Chào tạm biệt
+    - Tôi phải đi đây
 
-- intent: ask_detail
+- intent: ask_chapter
   examples: |
-    - Tell me about [Chapter 2](subtopic)
-    - Explain [MOSFET Characteristics](subtopic)
-    - I want to know about [Chapter 3](subtopic)
-    - Tell me about [MOSFET](subtopic)
-    - What are the [characteristics](subtopic) of MOSFET?
-    - Explain [analog](subtopic) circuits
+    - Nội dung chương [1](chapter_id) là gì?
+    - Chương [2](chapter_id) có gì?
+    - Hãy cho tôi biết chương [3](chapter_id)
+    - Thông tin về chương [4](chapter_id)
 
-- intent: ask_information
+- intent: ask_topics
   examples: |
-    - Tell me about [MOSFET](subtopic)
-    - Explain [Small-Signal Model](subtopic)
-    - What is [Threshold Voltage](subtopic)?
-    - Can you describe [Triode Mode](subtopic)?
-    - How does [Source Follower](subtopic) work?
-    - What are the [I-V Characteristics](subtopic) of MOS transistors?
-    - Give me details about [Differential Amplifiers](subtopic).
-    - What are the conditions for [Saturation Mode](subtopic)?
-    - Can you provide an example of [Common Source Amplifier](subtopic)?
-    - What is the [Frequency Response](subtopic) in analog circuits?
-    - I want to know about [Cutoff Mode](subtopic).
-    - Tell me an example of [Small-Signal Parameters](subtopic).
-    - What is the role of [Operational Amplifiers](subtopic)?
+    - Tôi muốn tìm hiểu về [Hieu ung Miller](topic_name)
+    - Nói cho tôi về [Dap ung tan so cua mach Cascode](topic_name)
+    - Giải thích [Mach khuech dai bam nguon (Source follower)](topic_name)
+    - Hãy cho tôi thông tin về [Guong dong co ban](topic_name)
+    - [Mo hinh tin hieu nho cua MOSFET](topic_name) là gì
+    - [Dap ung tan so cua mach vi sai](topic_name) nói về điều gì
 
-
-- intent: fallback
+- intent: ask_subtopic
   examples: |
-    - Sorry, I don't understand.
-    - Could you repeat that?
+    - Tôi muốn tìm hiểu về [Hiệu ứng Miller](subtopic_name)
+    - Nói cho tôi về [Đáp ứng tần số của mạch vi sai](subtopic_name)
+    - Giải thích về [Phân tích nhiễu trong mạch điện](subtopic_name)
+
+- intent: ask_conditions
+  examples: |
+    - Điều kiện của [Hiệu ứng Miller](subtopic_name) là gì?
+    - Hãy nói điều kiện của [mạch khuếch đại nguồn chung](subtopic_name).
+
+- intent: ask_details
+  examples: |
+    - Mô tả kỹ hơn về [Hiệu ứng Miller](subtopic_name).
+    - Hãy giải thích chi tiết về [mạch khuếch đại nguồn chung](subtopic_name).
+
+- intent: ask_characteristics
+  examples: |
+    - Mối quan hệ của [Hiệu ứng Miller](subtopic_name) là gì?
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+- intent: ask_application
+  examples: |
+    - Ứng dụng của [Hiệu ứng Miller](subtopic_name) là gì?
+    - Hãy nói về ứng dụng của [mạch khuếch đại nguồn chung](subtopic_name).
+    - Tôi muốn hỏi về ứng dụng của [Đáp ứng tần số của mạch vi sai](subtopic_name).
+
+- intent: ask_example
+  examples: |
+    - Tôi muốn biết ví dụ cụ thể về [Hiệu ứng Miller](subtopic_name).
+    - Hãy nói cho tôi về ví dụ của [mạch khuếch đại nguồn chung](subtopic_name).
+    - Ví dụ nào minh họa cho [Đáp ứng tần số của mạch vi sai](subtopic_name)?

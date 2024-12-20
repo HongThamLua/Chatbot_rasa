@@ -1,47 +1,65 @@
 version: "3.1"
 
 stories:
-  - story: user greets the bot
+  - story: Người dùng chào
     steps:
       - intent: greet
       - action: utter_greet
 
-  - story: user asks for fallback information
+  - story: Người dùng tạm biệt
     steps:
-      - intent: fallback
-      - action: action_default_fallback
+      - intent: goodbye
+      - action: utter_goodbye
 
-  - story: Fetch information about a specific subtopic
+  - story: Người dùng hỏi nội dung chương và chọn chủ đề
     steps:
-      - intent: ask_information
+      - intent: ask_chapter
         entities:
-          - subtopic: "MOSFET"
-      - action: action_fetch_information
+          - chapter_id: "1"
+      - action: action_fetch_chapter_and_suggest_topics
+      - intent: ask_topics
+        entities:
+          - topic_name: "Guong dong co ban"
+      - action: action_fetch_topic_details
 
-  - story: User asks about a specific mode of operation
+  - story: Người dùng hỏi về tiểu chủ đề
     steps:
-      - intent: ask_information
+      - intent: ask_subtopic
         entities:
-          - subtopic: "Triode Mode"
-      - action: action_fetch_information
+          - subtopic_name: "Hiệu ứng Miller"
+      - action: action_fetch_subtopic_details
 
-  - story: Provide examples and details
+  - story: Người dùng hỏi về ứng dụng của subtopic
     steps:
-      - intent: ask_information
+      - intent: ask_application
         entities:
-          - subtopic: "Common Source Amplifier"
-      - action: action_fetch_information
+          - subtopic_name: "mạch khuếch đại nguồn chung"
+      - action: action_fetch_application_details
 
-  - story: User asks for technical analysis
+  - story: Người dùng hỏi về điều kiện của subtopic
     steps:
-      - intent: ask_information
+      - intent: ask_conditions
         entities:
-          - subtopic: "Small-Signal Model"
-      - action: action_fetch_information
+          - subtopic_name: "Hiệu ứng Miller"
+      - action: action_fetch_subtopic_conditions
 
-  - story: User inquires about a condition or characteristic
+  - story: Người dùng hỏi về mô tả chi tiết của subtopic
     steps:
-      - intent: ask_information
+      - intent: ask_details
         entities:
-          - subtopic: "Threshold Voltage"
-      - action: action_fetch_information
+          - subtopic_name: "Hiệu ứng Miller"
+      - action: action_fetch_subtopic_details_description
+
+  - story: Người dùng hỏi về mối quan hệ của subtopic
+    steps:
+      - intent: ask_characteristics
+        entities:
+          - subtopic_name: "Hiệu ứng Miller"
+      - action: action_fetch_subtopic_characteristics
+
+  - story: Người dùng hỏi về ví dụ cụ thể của subtopic
+    steps:
+      - intent: ask_example
+        entities:
+          - subtopic_name: "Hiệu ứng Miller"
+      - action: action_fetch_example_details
