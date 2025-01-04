@@ -11,6 +11,8 @@ intents:
   - ask_characteristics
   - ask_application
   - ask_example
+  - nlu_fallback
+  - out_of_scope
 
 entities:
   - chapter_id
@@ -30,6 +32,12 @@ slots:
     mappings:
       - type: from_entity
         entity: topic_name
+  subtopic_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: subtopic_name
 
 actions:
   - utter_greet
@@ -42,6 +50,7 @@ actions:
   - action_fetch_subtopic_details_description
   - action_fetch_subtopic_characteristics
   - action_fetch_example_details
+  - action_default_fallback
 
 responses:
   utter_greet:
@@ -50,7 +59,6 @@ responses:
   utter_goodbye:
     - text: "Tạm biệt! Hẹn gặp lại bạn."
 
-  utter_no_data:
-    - text: "Tôi không tìm thấy dữ liệu phù hợp."
+
 
 

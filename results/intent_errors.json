@@ -1,0 +1,58 @@
+[
+  {
+    "text": "Tiểu chủ đề Phan tich tin hieu lon va nho trong MOSFET là gì?",
+    "intent": "ask_subtopic",
+    "intent_prediction": {
+      "name": "ask_topics",
+      "confidence": 0.953482985496521
+    }
+  },
+  {
+    "text": "Giải thích về Dong dien trong guong dong co ban",
+    "intent": "ask_subtopic",
+    "intent_prediction": {
+      "name": "ask_topics",
+      "confidence": 0.9996305704116821
+    }
+  },
+  {
+    "text": "On dinh dong dien vơi VGS là gì?",
+    "intent": "ask_subtopic",
+    "intent_prediction": {
+      "name": "ask_topics",
+      "confidence": 0.9919856786727905
+    }
+  },
+  {
+    "text": "Hãy nói điều kiện của On dinh dong dien voi VGS.",
+    "intent": "ask_conditions",
+    "intent_prediction": {
+      "name": "ask_topics",
+      "confidence": 0.5569239854812622
+    }
+  },
+  {
+    "text": "Mô tả kỹ hơn về Mo hinh nhieu flicker.",
+    "intent": "ask_details",
+    "intent_prediction": {
+      "name": "ask_subtopic",
+      "confidence": 0.8406000137329102
+    }
+  },
+  {
+    "text": "Hãy giải thích chi tiết về Tan so cat cao trong CS.",
+    "intent": "ask_details",
+    "intent_prediction": {
+      "name": "ask_topics",
+      "confidence": 0.5673583149909973
+    }
+  },
+  {
+    "text": "Hãy nói cho tôi về ví dụ của Nhieu nhiet trong dien tro.",
+    "intent": "ask_example",
+    "intent_prediction": {
+      "name": "ask_topics",
+      "confidence": 0.754463791847229
+    }
+  }
+]

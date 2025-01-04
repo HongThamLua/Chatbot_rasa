@@ -16,10 +16,10 @@ rules:
       - intent: ask_chapter
       - action: action_fetch_chapter_and_suggest_topics
 
-  - rule: Cung cấp chi tiết chủ đề
+  - rule: Cung cấp chi tiết tiểu chủ đề
     steps:
-      - intent: ask_topics
-      - action: action_fetch_topic_details
+      - intent: ask_subtopic
+      - action: action_fetch_subtopic_details
 
   - rule: Cung cấp chi tiết tiểu chủ đề
     steps:

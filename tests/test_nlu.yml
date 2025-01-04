@@ -1,0 +1,403 @@
+nlu:
+- examples: '- Chào
+
+    - Xin chào
+
+    - Hello
+
+    - Hi
+
+    - Chào buổi sáng
+
+    - Chào buổi tối
+
+    - Chào
+
+    - Xin chào
+
+    - Hello
+
+    - Hi
+
+    - Chào buổi sáng
+
+    - Chào buổi tối
+
+    - Chào
+
+    - Xin chào
+
+    - Hello
+
+    - Hi
+
+    - Chào buổi sáng
+
+    - Chào buổi tối
+
+    - Chào
+
+    - Xin chào'
+  intent: greet
+- examples: '- Tạm biệt
+
+    - Hẹn gặp lại
+
+    - Bye
+
+    - Chào tạm biệt
+
+    - Tôi phải đi đây
+
+    - Tạm biệt
+
+    - Hẹn gặp lại
+
+    - Bye
+
+    - Chào tạm biệt
+
+    - Tôi phải đi đây
+
+    - Tạm biệt
+
+    - Hẹn gặp lại
+
+    - Bye
+
+    - Chào tạm biệt
+
+    - Tôi phải đi đây
+
+    - Tạm biệt
+
+    - Hẹn gặp lại
+
+    - Bye
+
+    - Chào tạm biệt
+
+    - Tôi phải đi đây'
+  intent: goodbye
+- examples: '- Nội dung chương [1](chapter_id) là gì?
+
+    - Chương [2](chapter_id) có gì?
+
+    - Hãy cho tôi biết chương [3](chapter_id)
+
+    - Thông tin về chương [4](chapter_id)
+
+    Thông tin về chương [1](chapter_id)
+
+    Thông tin về chương [2](chapter_id)
+
+    Thông tin về chương [3](chapter_id)
+
+    Thông tin về chương [4](chapter_id)
+
+    Thông tin về chương [5](chapter_id)
+
+    Thông tin về chương [6](chapter_id)
+
+    Thông tin về chương [7](chapter_id)
+
+    Thông tin về chương [8](chapter_id)
+
+    - Nội dung chương [1](chapter_id) là gì?
+
+    - Chương [2](chapter_id) có gì?
+
+    - Hãy cho tôi biết chương [3](chapter_id)
+
+    - Thông tin về chương [4](chapter_id)
+
+    Thông tin về chương [1](chapter_id)
+
+    Thông tin về chương [2](chapter_id)
+
+    Thông tin về chương [3](chapter_id)
+
+    Thông tin về chương [4](chapter_id)'
+  intent: ask_chapter
+- examples: '- Tôi muốn tìm hiểu về [Guong dong co ban](topic_name)
+
+    - Nói cho tôi về [Cong nghe CMOS](topic_name)
+
+    - Giải thích về [Tin hieu va Nhieu trong thiet ke](topic_name)
+
+    - Chủ đề [Mach khuech dai](topic_name) là gì?
+
+    - [Cau truc Mosfet](topic_name), hãy nói chi tiết
+
+    Tôi muốn tìm hiểu về [Cac Muc Truu Tuong trong Thiet Ke](topic_name)
+
+    Tôi muốn tìm hiểu về [Cong Nghe CMOS va Vai Tro Cua No](topic_name)
+
+    Tôi muốn tìm hiểu về [Tin Hieu va Nhieu trong Thiet Ke](topic_name)
+
+    Tôi muốn tìm hiểu về [Cau truc MOSFET](topic_name)
+
+    Tôi muốn tìm hiểu về [Dac tinh I/V cua MOSFET](topic_name)
+
+    Tôi muốn tìm hiểu về [Hieu ung thu cap trong MOSFET](topic_name)
+
+    Tôi muốn tìm hiểu về [Mo hinh tin hieu nho cua MOSFET](topic_name)
+
+    Tôi muốn tìm hiểu về [Bo khuech dai nguon chung (Common Source Amplifier)](topic_name)
+
+    Tôi muốn tìm hiểu về [Bo khuech dai cong chung (Common Gate Amplifier)](topic_name)
+
+    Tôi muốn tìm hiểu về [Bo khuech dai bam nguon (Source Follower)](topic_name)
+
+    Tôi muốn tìm hiểu về [Tin hieu mot dau va tin hieu vi sai](topic_name)
+
+    Tôi muốn tìm hiểu về [Cap khuech dai vi sai co ban](topic_name)
+
+    Tôi muốn tìm hiểu về [Anh huong cua muc che do chung](topic_name)
+
+    Tôi muốn tìm hiểu về [Cap vi sai voi tai MOS](topic_name)
+
+    Tôi muốn tìm hiểu về [Gilbert Cell](topic_name)'
+  intent: ask_topics
+- examples: '- Nói cho tôi về [Do loi dien ap](subtopic_name)
+
+    - Tiểu chủ đề [Phan tich tin hieu lon va nho](subtopic_name) trong MOSFET là gì?
+
+    - Giải thích về [Dong dien trong guong dong co ban](subtopic_name)
+
+    - [On dinh dong dien vơi VGS](subtopic_name) là gì?
+
+    Nói cho tôi về [Muc Vat Ly Thiet Bi](subtopic_name)
+
+    Nói cho tôi về [Muc Mach](subtopic_name)
+
+    Nói cho tôi về [Muc Kien Truc](subtopic_name)
+
+    Nói cho tôi về [Uu Diem cua CMOS](subtopic_name)
+
+    Nói cho tôi về [Tin Hieu Analog va Hieu Ung Nhieu](subtopic_name)
+
+    Nói cho tôi về [Cau truc vat ly cua MOS](subtopic_name)
+
+    Nói cho tôi về [Nguyen ly hoat dong co ban](subtopic_name)
+
+    Nói cho tôi về [Dac tinh triode](subtopic_name)
+
+    Nói cho tôi về [Dac tinh bao hoa](subtopic_name)
+
+    Nói cho tôi về [Hieu ung body](subtopic_name)
+
+    Nói cho tôi về [Hieu ung kenh ngan](subtopic_name)
+
+    Nói cho tôi về [Dien dan xuyen dan (gm)](subtopic_name)
+
+    Nói cho tôi về [Dien tro dau ra (ro)](subtopic_name)
+
+    Nói cho tôi về [Do loi dien ap](subtopic_name)
+
+    Nói cho tôi về [Dien tro ngo vao va ngo ra](subtopic_name)
+
+    Nói cho tôi về [Dac tinh tro khang cua mach cong chung](subtopic_name)'
+  intent: ask_subtopic
+- examples: '- Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
+
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
+
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
+
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
+
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
+
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
+
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
+
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
+
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
+
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).'
+  intent: ask_conditions
+- examples: '- Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
+
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
+
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
+
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
+
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
+
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
+
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
+
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
+
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
+
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).'
+  intent: ask_details
+- examples: '- Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
+
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
+
+    - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?'
+  intent: ask_characteristics
+- examples: '- Ứng dụng của [Cuc va khong diem trong ham truyen](subtopic_name) là
+    gì?
+
+    - Hãy nói về ứng dụng của [Hieu ung Miller va dien dung ky sinh](subtopic_name).
+
+    - Tôi muốn hỏi về ứng dụng của [Dap ung tan so trong mach vi sai](subtopic_name).
+
+    - Ứng dụng của [Cuc va khong diem trong ham truyen](subtopic_name) là gì?
+
+    - Hãy nói về ứng dụng của [Hieu ung Miller va dien dung ky sinh](subtopic_name).
+
+    - Tôi muốn hỏi về ứng dụng của [Dap ung tan so trong mach vi sai](subtopic_name).
+
+    - Ứng dụng của [Cuc va khong diem trong ham truyen](subtopic_name) là gì?
+
+    - Hãy nói về ứng dụng của [Hieu ung Miller va dien dung ky sinh](subtopic_name).
+
+    - Tôi muốn hỏi về ứng dụng của [Dap ung tan so trong mach vi sai](subtopic_name).
+
+    - Ứng dụng của [Cuc va khong diem trong ham truyen](subtopic_name) là gì?
+
+    - Hãy nói về ứng dụng của [Hieu ung Miller va dien dung ky sinh](subtopic_name).
+
+    - Tôi muốn hỏi về ứng dụng của [Dap ung tan so trong mach vi sai](subtopic_name).
+
+    - Ứng dụng của [Cuc va khong diem trong ham truyen](subtopic_name) là gì?
+
+    - Hãy nói về ứng dụng của [Hieu ung Miller va dien dung ky sinh](subtopic_name).
+
+    - Tôi muốn hỏi về ứng dụng của [Dap ung tan so trong mach vi sai](subtopic_name).
+
+    - Ứng dụng của [Cuc va khong diem trong ham truyen](subtopic_name) là gì?
+
+    - Hãy nói về ứng dụng của [Hieu ung Miller va dien dung ky sinh](subtopic_name).
+
+    - Tôi muốn hỏi về ứng dụng của [Dap ung tan so trong mach vi sai](subtopic_name).
+
+    - Ứng dụng của [Cuc va khong diem trong ham truyen](subtopic_name) là gì?
+
+    - Hãy nói về ứng dụng của [Hieu ung Miller va dien dung ky sinh](subtopic_name).'
+  intent: ask_application
+- examples: '- Tôi muốn biết ví dụ cụ thể về [Mach hoi tiep duong va hysteresis](subtopic_name).
+
+    - Hãy nói cho tôi về ví dụ của [Nhieu nhiet trong dien tro](subtopic_name).
+
+    - Ví dụ nào minh họa cho [Do loi che do chung (CMRR)](subtopic_name)?
+
+    - Tôi muốn biết ví dụ cụ thể về [Mach hoi tiep duong va hysteresis](subtopic_name).
+
+    - Hãy nói cho tôi về ví dụ của [Nhieu nhiet trong dien tro](subtopic_name).
+
+    - Ví dụ nào minh họa cho [Do loi che do chung (CMRR)](subtopic_name)?
+
+    - Tôi muốn biết ví dụ cụ thể về [Mach hoi tiep duong va hysteresis](subtopic_name).
+
+    - Hãy nói cho tôi về ví dụ của [Nhieu nhiet trong dien tro](subtopic_name).
+
+    - Ví dụ nào minh họa cho [Do loi che do chung (CMRR)](subtopic_name)?
+
+    - Tôi muốn biết ví dụ cụ thể về [Mach hoi tiep duong va hysteresis](subtopic_name).
+
+    - Hãy nói cho tôi về ví dụ của [Nhieu nhiet trong dien tro](subtopic_name).
+
+    - Ví dụ nào minh họa cho [Do loi che do chung (CMRR)](subtopic_name)?
+
+    - Tôi muốn biết ví dụ cụ thể về [Mach hoi tiep duong va hysteresis](subtopic_name).
+
+    - Hãy nói cho tôi về ví dụ của [Nhieu nhiet trong dien tro](subtopic_name).
+
+    - Ví dụ nào minh họa cho [Do loi che do chung (CMRR)](subtopic_name)?
+
+    - Tôi muốn biết ví dụ cụ thể về [Mach hoi tiep duong va hysteresis](subtopic_name).
+
+    - Hãy nói cho tôi về ví dụ của [Nhieu nhiet trong dien tro](subtopic_name).
+
+    - Ví dụ nào minh họa cho [Do loi che do chung (CMRR)](subtopic_name)?
+
+    - Tôi muốn biết ví dụ cụ thể về [Mach hoi tiep duong va hysteresis](subtopic_name).
+
+    - Hãy nói cho tôi về ví dụ của [Nhieu nhiet trong dien tro](subtopic_name).'
+  intent: ask_example
+version: '3.1'

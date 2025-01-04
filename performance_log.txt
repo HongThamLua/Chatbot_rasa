@@ -1,0 +1,203 @@
+[DEBUG] Action Selection Time: 0.0000 seconds
+[DEBUG] Action Execution Time: 0.1267 seconds
+[DEBUG] Total Response Time: 0.0000 seconds
+[DEBUG] Action: action_fetch_chapter_and_suggest_topics Execution Time: 0.0299 seconds
+[DEBUG] Action: action_fetch_topic_details Execution Time: 0.0231 seconds
+[DEBUG] Action: action_fetch_subtopic_details Execution Time: 0.0147 seconds
+[DEBUG] Action: action_fetch_application_details Execution Time: 0.0114 seconds
+[DEBUG] Action: action_fetch_subtopic_conditions Execution Time: 0.0119 seconds
+[DEBUG] Action: action_fetch_subtopic_details_description Execution Time: 0.0129 seconds
+[DEBUG] Action: action_fetch_subtopic_characteristics Execution Time: 0.0186 seconds
+[DEBUG] Action: action_fetch_example_details Execution Time: 0.0334 seconds
+[DEBUG] NLU Processing Time: 0.0000 seconds
+[DEBUG] Action Selection Time: 0.0000 seconds
+[DEBUG] Action Execution Time: 0.0420 seconds
+[DEBUG] Total Response Time: 0.0000 seconds
+[DEBUG] Action: action_fetch_chapter_and_suggest_topics Execution Time: 0.0427 seconds
+[DEBUG] Action: action_fetch_topic_details Execution Time: 0.0117 seconds
+[DEBUG] Action: action_fetch_subtopic_details Execution Time: 0.0239 seconds
+[DEBUG] Action: action_fetch_application_details Execution Time: 0.0271 seconds
+[DEBUG] Action: action_fetch_subtopic_conditions Execution Time: 0.0287 seconds
+[DEBUG] Action: action_fetch_subtopic_details_description Execution Time: 0.0092 seconds
+[DEBUG] Action: action_fetch_subtopic_characteristics Execution Time: 0.0074 seconds
+[DEBUG] Action: action_fetch_example_details Execution Time: 0.0095 seconds
+[DEBUG] NLU Processing Time: 0.0000 seconds
+[DEBUG] Action Selection Time: 0.0000 seconds
+[DEBUG] Action Execution Time: 0.0395 seconds
+[DEBUG] Total Response Time: 0.0000 seconds
+[DEBUG] Action: action_fetch_chapter_and_suggest_topics Execution Time: 0.0441 seconds
+[DEBUG] Action: action_fetch_topic_details Execution Time: 0.0117 seconds
+[DEBUG] Action: action_fetch_subtopic_details Execution Time: 0.0270 seconds
+[DEBUG] Action: action_fetch_application_details Execution Time: 0.0321 seconds
+[DEBUG] Action: action_fetch_subtopic_conditions Execution Time: 0.0265 seconds
+[DEBUG] Action: action_fetch_subtopic_details_description Execution Time: 0.0297 seconds
+[DEBUG] Action: action_fetch_subtopic_characteristics Execution Time: 0.0332 seconds
+[DEBUG] Action: action_fetch_example_details Execution Time: 0.0262 seconds
+[DEBUG] Action Execution Time: 0.0204 seconds
+[DEBUG] Action: action_fetch_chapter_and_suggest_topics Execution Time: 0.0075 seconds
+[DEBUG] Action: action_fetch_topic_details Execution Time: 0.0238 seconds
+[DEBUG] Action: action_fetch_subtopic_details Execution Time: 0.0303 seconds
+[DEBUG] Action: action_fetch_application_details Execution Time: 0.0324 seconds
+[DEBUG] Action: action_fetch_subtopic_conditions Execution Time: 0.0321 seconds
+[DEBUG] Action: action_fetch_subtopic_details_description Execution Time: 0.0279 seconds
+[DEBUG] Action: action_fetch_subtopic_characteristics Execution Time: 0.0294 seconds
+[DEBUG] Action: action_fetch_example_details Execution Time: 0.0292 seconds
+[DEBUG] NLU Processing Time: 0.7451 seconds
+[DEBUG] Action Execution Time: 0.0110 seconds
+[DEBUG] Action: action_fetch_chapter_and_suggest_topics Execution Time: 0.0245 seconds
+[DEBUG] Action: action_fetch_topic_details Execution Time: 0.0050 seconds
+[DEBUG] Action: action_fetch_subtopic_details Execution Time: 0.0270 seconds
+[DEBUG] Action: action_fetch_application_details Execution Time: 0.0336 seconds
+[DEBUG] Action: action_fetch_subtopic_conditions Execution Time: 0.0329 seconds
+[DEBUG] Action: action_fetch_subtopic_details_description Execution Time: 0.0271 seconds
+[DEBUG] Action: action_fetch_subtopic_characteristics Execution Time: 0.0309 seconds
+[DEBUG] Action: action_fetch_example_details Execution Time: 0.0305 seconds
+[DEBUG] NLU Processing Time: 0.7524 seconds
+[DEBUG] Action Selection Time: 0.8171 seconds
+[DEBUG] Action Execution Time: 0.0315 seconds
+[DEBUG] Total Response Time: 0.8340 seconds
+[DEBUG] Action: action_fetch_chapter_and_suggest_topics Execution Time: 0.0313 seconds
+[DEBUG] Action: action_fetch_topic_details Execution Time: 0.0329 seconds
+[DEBUG] Action: action_fetch_subtopic_details Execution Time: 0.0271 seconds
+[DEBUG] Action: action_fetch_application_details Execution Time: 0.0331 seconds
+[DEBUG] Action: action_fetch_subtopic_conditions Execution Time: 0.0299 seconds
+[DEBUG] Action: action_fetch_subtopic_details_description Execution Time: 0.0321 seconds
+[DEBUG] Action: action_fetch_subtopic_characteristics Execution Time: 0.0325 seconds
+[DEBUG] Action: action_fetch_example_details Execution Time: 0.0282 seconds
+[DEBUG] Action: action_fetch_chapter_and_suggest_topics Execution Time: 0.1551 seconds
+[DEBUG] Action: action_fetch_topic_details Execution Time: 0.0195 seconds
+[DEBUG] Action: action_fetch_subtopic_details Execution Time: 0.0311 seconds
+[DEBUG] Action: action_fetch_application_details Execution Time: 0.0197 seconds
+[DEBUG] Action: action_fetch_subtopic_conditions Execution Time: 0.0191 seconds
+[DEBUG] Action: action_fetch_subtopic_details_description Execution Time: 0.0130 seconds
+[DEBUG] Action: action_fetch_subtopic_characteristics Execution Time: 0.0109 seconds
+[DEBUG] Action: action_fetch_example_details Execution Time: 0.0109 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 1': 1.1646 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 2': 0.0379 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 3': 0.0377 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 4': 0.0371 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 5': 0.0399 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 6': 0.0521 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 7': 0.0493 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 8': 0.0500 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 9': 0.0487 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 10': 0.0574 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 11': 0.0730 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 12': 0.0730 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 13': 0.0530 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 14': 0.0514 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 15': 0.0494 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 16': 0.0726 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 17': 0.0770 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 18': 0.0696 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 19': 0.0730 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 20': 0.0876 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 21': 0.0761 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 22': 0.0769 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 23': 0.0815 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 24': 0.0589 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 25': 0.0573 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 26': 0.0591 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 27': 0.0902 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 28': 0.0737 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 29': 0.0691 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 30': 0.0834 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 31': 0.0688 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 32': 0.1127 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 33': 0.0994 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 34': 0.0834 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 35': 0.0682 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 36': 0.0727 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 37': 0.0720 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 38': 0.0852 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 39': 0.0788 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 40': 0.0695 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 41': 0.0677 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 42': 0.0778 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 43': 0.0961 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 44': 0.1166 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 45': 0.0943 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 46': 0.0816 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 47': 0.0824 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 48': 0.0765 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 49': 0.0811 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 50': 0.0783 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 51': 0.1245 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 52': 0.0812 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 53': 0.1333 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 54': 0.0898 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 55': 0.0802 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 56': 0.1145 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 57': 0.1125 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 58': 0.1095 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 59': 0.0829 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 60': 0.1052 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 61': 0.1263 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 62': 0.1393 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 63': 0.1165 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 64': 0.1162 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 65': 0.1101 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 66': 0.1082 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 67': 0.1295 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 68': 0.9762 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 69': 0.3629 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 70': 0.2217 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 71': 0.2573 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 72': 0.1139 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 73': 0.1224 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 74': 0.1206 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 75': 0.1133 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 76': 0.1155 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 77': 0.1208 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 78': 0.1372 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 79': 0.1274 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 80': 0.1123 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 81': 0.1766 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 82': 0.1471 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 83': 0.1998 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 84': 0.1698 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 85': 0.1280 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 86': 0.1622 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 87': 0.1530 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 88': 0.1598 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 89': 0.1474 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 90': 0.1522 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 91': 0.1723 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 92': 0.1390 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 93': 0.1729 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 94': 0.1478 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 95': 0.1306 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 96': 0.1443 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 97': 0.1328 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 98': 0.1556 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 99': 0.1459 seconds
+[DEBUG] NLU Processing Time for 'Câu hỏi mẫu 100': 0.1344 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 1': 0.7272 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 2': 0.0328 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 3': 0.0353 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 4': 0.0428 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 5': 0.0424 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 6': 0.0417 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 7': 0.0437 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 8': 0.0362 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 9': 0.0367 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 10': 0.0386 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 11': 0.0392 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 12': 0.0407 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 13': 0.0428 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 14': 0.0417 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 15': 0.0437 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 16': 0.0439 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 17': 0.0438 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 18': 0.0459 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 19': 0.0452 seconds
+[DEBUG] Response Time for 'Hội thoại câu hỏi 20': 0.0448 seconds
+[DEBUG] Total Conversation Time: 1.5224 seconds
+[DEBUG] Action: action_fetch_chapter_and_suggest_topics Execution Time: 0.0211 seconds
+[DEBUG] Action: action_fetch_topic_details Execution Time: 0.0149 seconds
+[DEBUG] Action: action_fetch_subtopic_details Execution Time: 0.0349 seconds
+[DEBUG] Action: action_fetch_application_details Execution Time: 0.0305 seconds
+[DEBUG] Action: action_fetch_subtopic_conditions Execution Time: 0.0315 seconds
+[DEBUG] Action: action_fetch_subtopic_details_description Execution Time: 0.0315 seconds
+[DEBUG] Action: action_fetch_subtopic_characteristics Execution Time: 0.0245 seconds
+[DEBUG] Action: action_fetch_example_details Execution Time: 0.0054 seconds

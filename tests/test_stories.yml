@@ -1,91 +1,395 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
-
 stories:
-- story: happy path 1
-  steps:
-  - user: |
-      hello there!
-    intent: greet
+- steps:
+  - intent: greet
   - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-
-- story: happy path 2
-  steps:
-  - user: |
-      hello there!
-    intent: greet
+  story: Người dùng chào
+- steps:
+  - intent: greet
   - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
+  story: Người dùng chào - variation
+- steps:
+  - intent: goodbye
   - action: utter_goodbye
-
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
+  story: Người dùng tạm biệt
+- steps:
+  - intent: goodbye
   - action: utter_goodbye
-
-- story: sad path 3
-  steps:
-  - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
-
-- story: say goodbye
-  steps:
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: bot challenge
-  steps:
-  - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+  story: Người dùng tạm biệt - variation
+- steps:
+  - entities:
+    - chapter_id: '1'
+    intent: ask_chapter
+  - action: action_fetch_chapter_and_suggest_topics
+  - entities:
+    - topic_name: Guong dong co ban
+    intent: ask_topics
+  - action: action_fetch_topic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_details
+  - action: action_fetch_subtopic_details_description
+  story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp
+    về các tiểu chủ đề, hỏi mô tả thêm
+- steps:
+  - intent: ask_chapter
+  - action: action_fetch_chapter_and_suggest_topics
+  - intent: ask_topics
+  - action: action_fetch_topic_details
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_details
+  - action: action_fetch_subtopic_details_description
+  story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp
+    về các tiểu chủ đề, hỏi mô tả thêm - variation
+- steps:
+  - entities:
+    - topic_name: Guong dong co ban
+    intent: ask_topics
+  - action: action_fetch_topic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_details
+  - action: action_fetch_subtopic_details_description
+  story: Người dùng hỏi chủ đề, chọn các tiểu chủ đề, hỏi mô tả thêm
+- steps:
+  - intent: ask_topics
+  - action: action_fetch_topic_details
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_details
+  - action: action_fetch_subtopic_details_description
+  story: Người dùng hỏi chủ đề, chọn các tiểu chủ đề, hỏi mô tả thêm - variation
+- steps:
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_details
+  - action: action_fetch_subtopic_details_description
+  story: ngời hỏi các tiểu chủ đề, hỏi mô tả thêm
+- steps:
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_details
+  - action: action_fetch_subtopic_details_description
+  story: ngời hỏi các tiểu chủ đề, hỏi mô tả thêm - variation
+- steps:
+  - entities:
+    - chapter_id: '1'
+    intent: ask_chapter
+  - action: action_fetch_chapter_and_suggest_topics
+  - entities:
+    - topic_name: Guong dong co ban
+    intent: ask_topics
+  - action: action_fetch_topic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_characteristics
+  - action: action_fetch_subtopic_characteristics
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_example
+  - action: action_fetch_example_details
+  story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp
+    về các tiểu chủ đề, hỏi mqh và rồi ví dụ
+- steps:
+  - intent: ask_chapter
+  - action: action_fetch_chapter_and_suggest_topics
+  - intent: ask_topics
+  - action: action_fetch_topic_details
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_characteristics
+  - action: action_fetch_subtopic_characteristics
+  - intent: ask_example
+  - action: action_fetch_example_details
+  story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp
+    về các tiểu chủ đề, hỏi mqh và rồi ví dụ - variation
+- steps:
+  - entities:
+    - topic_name: Guong dong co ban
+    intent: ask_topics
+  - action: action_fetch_topic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_characteristics
+  - action: action_fetch_subtopic_characteristics
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_example
+  - action: action_fetch_example_details
+  story: Người hỏi chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi mqh và rồi ví dụ
+- steps:
+  - intent: ask_topics
+  - action: action_fetch_topic_details
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_characteristics
+  - action: action_fetch_subtopic_characteristics
+  - intent: ask_example
+  - action: action_fetch_example_details
+  story: Người hỏi chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi mqh và rồi ví dụ
+    - variation
+- steps:
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_characteristics
+  - action: action_fetch_subtopic_characteristics
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_example
+  - action: action_fetch_example_details
+  story: ngời hỏi tiểu chủ đề, hỏi mqh và rồi ví dụ
+- steps:
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_characteristics
+  - action: action_fetch_subtopic_characteristics
+  - intent: ask_example
+  - action: action_fetch_example_details
+  story: ngời hỏi tiểu chủ đề, hỏi mqh và rồi ví dụ - variation
+- steps:
+  - entities:
+    - chapter_id: '1'
+    intent: ask_chapter
+  - action: action_fetch_chapter_and_suggest_topics
+  - entities:
+    - topic_name: Guong dong co ban
+    intent: ask_topics
+  - action: action_fetch_topic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_conditions
+  - action: action_fetch_subtopic_conditions
+  story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp
+    về các tiểu chủ đề, hỏi về điều kiện
+- steps:
+  - intent: ask_chapter
+  - action: action_fetch_chapter_and_suggest_topics
+  - intent: ask_topics
+  - action: action_fetch_topic_details
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_conditions
+  - action: action_fetch_subtopic_conditions
+  story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp
+    về các tiểu chủ đề, hỏi về điều kiện - variation
+- steps:
+  - entities:
+    - topic_name: Guong dong co ban
+    intent: ask_topics
+  - action: action_fetch_topic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_conditions
+  - action: action_fetch_subtopic_conditions
+  story: Người dùng hỏi chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi về điều kiện
+- steps:
+  - intent: ask_topics
+  - action: action_fetch_topic_details
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_conditions
+  - action: action_fetch_subtopic_conditions
+  story: Người dùng hỏi chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi về điều kiện
+    - variation
+- steps:
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_conditions
+  - action: action_fetch_subtopic_conditions
+  story: Người dùng hỏi tiểu chủ đề, hỏi về điều kiện
+- steps:
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_conditions
+  - action: action_fetch_subtopic_conditions
+  story: Người dùng hỏi tiểu chủ đề, hỏi về điều kiện - variation
+- steps:
+  - entities:
+    - chapter_id: '1'
+    intent: ask_chapter
+  - action: action_fetch_chapter_and_suggest_topics
+  - entities:
+    - topic_name: Guong dong co ban
+    intent: ask_topics
+  - action: action_fetch_topic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_application
+  - action: action_fetch_application_details
+  story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp
+    về các tiểu chủ đề, hỏi về ứng dụng
+- steps:
+  - intent: ask_chapter
+  - action: action_fetch_chapter_and_suggest_topics
+  - intent: ask_topics
+  - action: action_fetch_topic_details
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_application
+  - action: action_fetch_application_details
+  story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp
+    về các tiểu chủ đề, hỏi về ứng dụng - variation
+- steps:
+  - entities:
+    - topic_name: Guong dong co ban
+    intent: ask_topics
+  - action: action_fetch_topic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_application
+  - action: action_fetch_application_details
+  story: Người dùng hỏi chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi về ứng dụng
+- steps:
+  - intent: ask_topics
+  - action: action_fetch_topic_details
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_application
+  - action: action_fetch_application_details
+  story: Người dùng hỏi chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi về ứng dụng
+    - variation
+- steps:
+  - action: action_fetch_topic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_application
+  - action: action_fetch_application_details
+  story: Người dùng hỏi tiểu chủ đề, hỏi về ứng dụng
+- steps:
+  - action: action_fetch_topic_details
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  - intent: ask_application
+  - action: action_fetch_application_details
+  story: Người dùng hỏi tiểu chủ đề, hỏi về ứng dụng - variation
+- steps:
+  - entities:
+    - subtopic_name: Hieu ung Miller
+    intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  story: Người dùng hỏi về tiểu chủ đề
+- steps:
+  - intent: ask_subtopic
+  - action: action_fetch_subtopic_details
+  story: Người dùng hỏi về tiểu chủ đề - variation
+- steps:
+  - entities:
+    - subtopic_name: mach khuech dai nguon chung
+    intent: ask_application
+  - action: action_fetch_application_details
+  story: Người dùng hỏi về ứng dụng của subtopic
+- steps:
+  - intent: ask_application
+  - action: action_fetch_application_details
+  story: Người dùng hỏi về ứng dụng của subtopic - variation
+- steps:
+  - entities:
+    - subtopic_name: Do loi vi sai voi tai CMOS
+    intent: ask_conditions
+  - action: action_fetch_subtopic_conditions
+  story: Người dùng hỏi về điều kiện của subtopic
+- steps:
+  - intent: ask_conditions
+  - action: action_fetch_subtopic_conditions
+  story: Người dùng hỏi về điều kiện của subtopic - variation
+- steps:
+  - entities:
+    - subtopic_name: Do loi vi sai voi tai CMOS
+    intent: ask_details
+  - action: action_fetch_subtopic_details_description
+  story: Người dùng hỏi về mô tả chi tiết của subtopic
+- steps:
+  - intent: ask_details
+  - action: action_fetch_subtopic_details_description
+  story: Người dùng hỏi về mô tả chi tiết của subtopic - variation
+- steps:
+  - entities:
+    - subtopic_name: Do loi vi sai voi tai CMOS
+    intent: ask_characteristics
+  - action: action_fetch_subtopic_characteristics
+  - entities:
+    - subtopic_name: Anh huong cua tai
+    intent: ask_example
+  - action: action_fetch_example_details
+  story: Người dùng hỏi về mối quan hệ của subtopic
+- steps:
+  - intent: ask_characteristics
+  - action: action_fetch_subtopic_characteristics
+  - intent: ask_example
+  - action: action_fetch_example_details
+  story: Người dùng hỏi về mối quan hệ của subtopic - variation
+- steps:
+  - entities:
+    - subtopic_name: Do loi vi sai voi tai CMOS
+    intent: ask_example
+  - action: action_fetch_example_details
+  story: Người dùng hỏi về ví dụ cụ thể của subtopic
+- steps:
+  - intent: ask_example
+  - action: action_fetch_example_details
+  story: Người dùng hỏi về ví dụ cụ thể của subtopic - variation
+- steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+  story: Fallback khi không hiểu ý định
+- steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+  story: Fallback khi không hiểu ý định - variation
+- steps:
+  - intent: out_of_scope
+  - action: action_default_fallback
+  story: Fallback khi không có dữ liệu
+- steps:
+  - intent: out_of_scope
+  - action: action_default_fallback
+  story: Fallback khi không có dữ liệu - variation
+version: '3.1'

@@ -1,0 +1,432 @@
+[
+  {
+    "text": "Nói cho tôi về Do loi dien ap",
+    "entities": [
+      {
+        "start": 15,
+        "end": 29,
+        "value": "Do loi dien ap",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 15,
+        "end": 17,
+        "confidence_entity": 0.663901150226593,
+        "value": "Do",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 22,
+        "end": 29,
+        "confidence_entity": 0.5771550536155701,
+        "value": "dien ap",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tiểu chủ đề Phan tich tin hieu lon va nho trong MOSFET là gì?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 41,
+        "value": "Phan tich tin hieu lon va nho",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subtopic_name",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.7982228994369507,
+        "value": "Phan",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 17,
+        "end": 21,
+        "confidence_entity": 0.6223955750465393,
+        "value": "tich",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 22,
+        "end": 54,
+        "confidence_entity": 0.7443658709526062,
+        "value": "tin hieu lon va nho trong MOSFET",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Giải thích về Dong dien trong guong dong co ban",
+    "entities": [
+      {
+        "start": 14,
+        "end": 47,
+        "value": "Dong dien trong guong dong co ban",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 14,
+        "end": 29,
+        "confidence_entity": 0.4963758587837219,
+        "value": "Dong dien trong",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 30,
+        "end": 47,
+        "confidence_entity": 0.9981749057769775,
+        "value": "Guong dong co ban",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "On dinh dong dien vơi VGS là gì?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 25,
+        "value": "On dinh dong dien vơi VGS",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 8,
+        "end": 12,
+        "confidence_entity": 0.9973663687705994,
+        "value": "dong",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Điều kiện của Sai so dong trong Wilson là gì?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 38,
+        "value": "Sai so dong trong Wilson",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subtopic_name",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9995514750480652,
+        "value": "Sai",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 21,
+        "end": 38,
+        "confidence_entity": 0.6458320617675781,
+        "value": "dong trong Wilson",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Hãy nói điều kiện của On dinh dong dien voi VGS.",
+    "entities": [
+      {
+        "start": 22,
+        "end": 47,
+        "value": "On dinh dong dien voi VGS",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 30,
+        "end": 47,
+        "confidence_entity": 0.874664843082428,
+        "value": "dong dien voi VGS",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Mô tả kỹ hơn về Mo hinh nhieu flicker.",
+    "entities": [
+      {
+        "start": 16,
+        "end": 37,
+        "value": "Mo hinh nhieu flicker",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subtopic_name",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.6505270004272461,
+        "value": "Mô",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 16,
+        "end": 37,
+        "confidence_entity": 0.8880137801170349,
+        "value": "Mo hinh nhieu flicker",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Hãy giải thích chi tiết về Tan so cat cao trong CS.",
+    "entities": [
+      {
+        "start": 27,
+        "end": 50,
+        "value": "Tan so cat cao trong CS",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.6672344207763672,
+        "value": "Tan so",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 34,
+        "end": 50,
+        "confidence_entity": 0.5123195052146912,
+        "value": "cat cao trong CS",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Mối quan hệ của Tan so cat thap trong CS là gì?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 40,
+        "value": "Tan so cat thap trong CS",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 20,
+        "end": 22,
+        "confidence_entity": 0.4521154463291168,
+        "value": "so",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "subtopic_name",
+        "start": 23,
+        "end": 40,
+        "confidence_entity": 0.45483750104904175,
+        "value": "cat thap trong CS",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Ứng dụng của Cuc va khong diem trong ham truyen là gì?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 47,
+        "value": "Cuc va khong diem trong ham truyen",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 13,
+        "end": 47,
+        "confidence_entity": 0.3381143808364868,
+        "value": "Cuc va khong diem trong ham truyen",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Hãy nói về ứng dụng của Hieu ung Miller va dien dung ky sinh.",
+    "entities": [
+      {
+        "start": 24,
+        "end": 60,
+        "value": "Hieu ung Miller va dien dung ky sinh",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subtopic_name",
+        "start": 11,
+        "end": 14,
+        "confidence_entity": 0.9879856705665588,
+        "value": "ứng",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 24,
+        "end": 47,
+        "confidence_entity": 0.7464697360992432,
+        "value": "Hieu ung Miller va dien",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "subtopic_name",
+        "start": 53,
+        "end": 60,
+        "confidence_entity": 0.9816816449165344,
+        "value": "ky sinh",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tôi muốn hỏi về ứng dụng của Dap ung tan so trong mach vi sai.",
+    "entities": [
+      {
+        "start": 29,
+        "end": 61,
+        "value": "Dap ung tan so trong mach vi sai",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 29,
+        "end": 49,
+        "confidence_entity": 0.5423555374145508,
+        "value": "Dap ung tan so trong",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "subtopic_name",
+        "start": 50,
+        "end": 61,
+        "confidence_entity": 0.8,
+        "value": "mach vi sai",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tôi muốn biết ví dụ cụ thể về Mach hoi tiep duong va hysteresis.",
+    "entities": [
+      {
+        "start": 30,
+        "end": 63,
+        "value": "Mach hoi tiep duong va hysteresis",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 30,
+        "end": 43,
+        "confidence_entity": 0.8,
+        "value": "Mach hoi tiep",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 44,
+        "end": 63,
+        "confidence_entity": 0.7584137320518494,
+        "value": "duong va hysteresis",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Hãy nói cho tôi về ví dụ của Nhieu nhiet trong dien tro.",
+    "entities": [
+      {
+        "start": 29,
+        "end": 55,
+        "value": "Nhieu nhiet trong dien tro",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subtopic_name",
+        "start": 25,
+        "end": 55,
+        "confidence_entity": 0.5456737279891968,
+        "value": "của Nhieu nhiet trong dien tro",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Ví dụ nào minh họa cho Do loi che do chung (CMRR)?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 49,
+        "value": "Do loi che do chung (CMRR)",
+        "entity": "subtopic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic_name",
+        "start": 23,
+        "end": 25,
+        "confidence_entity": 0.9746058583259583,
+        "value": "Do",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "topic_name",
+        "start": 30,
+        "end": 42,
+        "confidence_entity": 0.9106149077415466,
+        "value": "che do chung",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "subtopic_name",
+        "start": 44,
+        "end": 48,
+        "confidence_entity": 0.6502512097358704,
+        "value": "CMRR",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

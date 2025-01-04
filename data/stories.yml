@@ -11,7 +11,7 @@ stories:
       - intent: goodbye
       - action: utter_goodbye
 
-  - story: Người dùng hỏi nội dung chương và chọn chủ đề
+  - story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi mô tả thêm
     steps:
       - intent: ask_chapter
         entities:
@@ -21,45 +21,241 @@ stories:
         entities:
           - topic_name: "Guong dong co ban"
       - action: action_fetch_topic_details
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_details
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details_description
+
+  - story: Người dùng hỏi chủ đề, chọn các tiểu chủ đề, hỏi mô tả thêm
+    steps:
+      - intent: ask_topics
+        entities:
+          - topic_name: "Guong dong co ban"
+      - action: action_fetch_topic_details
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_details
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details_description
+
+  - story: ngời hỏi các tiểu chủ đề, hỏi mô tả thêm
+    steps:
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_details
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details_description
+
+  - story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi mqh và rồi ví dụ
+    steps:
+      - intent: ask_chapter
+        entities:
+          - chapter_id: "1"
+      - action: action_fetch_chapter_and_suggest_topics
+      - intent: ask_topics
+        entities:
+          - topic_name: "Guong dong co ban"
+      - action: action_fetch_topic_details
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_characteristics
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_characteristics
+      - intent: ask_example
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_example_details
+
+  - story: Người hỏi chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi mqh và rồi ví dụ
+    steps:
+      - intent: ask_topics
+        entities:
+          - topic_name: "Guong dong co ban"
+      - action: action_fetch_topic_details
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_characteristics
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_characteristics
+      - intent: ask_example
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_example_details
+
+  - story: ngời hỏi tiểu chủ đề, hỏi mqh và rồi ví dụ
+    steps:
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_characteristics
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_characteristics
+      - intent: ask_example
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_example_details
+
+  - story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi về điều kiện
+    steps:
+      - intent: ask_chapter
+        entities:
+          - chapter_id: "1"
+      - action: action_fetch_chapter_and_suggest_topics
+      - intent: ask_topics
+        entities:
+          - topic_name: "Guong dong co ban"
+      - action: action_fetch_topic_details
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_conditions
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_conditions
+
+  - story: Người dùng hỏi chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi về điều kiện
+    steps:
+      - intent: ask_topics
+        entities:
+          - topic_name: "Guong dong co ban"
+      - action: action_fetch_topic_details
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_conditions
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_conditions
+
+  - story: Người dùng hỏi tiểu chủ đề, hỏi về điều kiện
+    steps:
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_conditions
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_conditions
+
+  - story: Người dùng hỏi nội dung chương và chọn chủ đề, chọn chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi về ứng dụng
+    steps:
+      - intent: ask_chapter
+        entities:
+          - chapter_id: "1"
+      - action: action_fetch_chapter_and_suggest_topics
+      - intent: ask_topics
+        entities:
+          - topic_name: "Guong dong co ban"
+      - action: action_fetch_topic_details
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_application
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_application_details
+
+  - story: Người dùng hỏi chủ đề xong lại hỏi tếp về các tiểu chủ đề, hỏi về ứng dụng
+    steps:
+      - intent: ask_topics
+        entities:
+          - topic_name: "Guong dong co ban"
+      - action: action_fetch_topic_details
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_application
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_application_details
+
+  - story: Người dùng hỏi tiểu chủ đề, hỏi về ứng dụng
+    steps:
+      - action: action_fetch_topic_details
+      - intent: ask_subtopic
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_subtopic_details
+      - intent: ask_application
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_application_details
 
   - story: Người dùng hỏi về tiểu chủ đề
     steps:
       - intent: ask_subtopic
         entities:
-          - subtopic_name: "Hiệu ứng Miller"
+          - subtopic_name: "Hieu ung Miller"
       - action: action_fetch_subtopic_details
 
   - story: Người dùng hỏi về ứng dụng của subtopic
     steps:
       - intent: ask_application
         entities:
-          - subtopic_name: "mạch khuếch đại nguồn chung"
+          - subtopic_name: "mach khuech dai nguon chung"
       - action: action_fetch_application_details
 
   - story: Người dùng hỏi về điều kiện của subtopic
     steps:
       - intent: ask_conditions
         entities:
-          - subtopic_name: "Hiệu ứng Miller"
+          - subtopic_name: "Do loi vi sai voi tai CMOS"
       - action: action_fetch_subtopic_conditions
 
   - story: Người dùng hỏi về mô tả chi tiết của subtopic
     steps:
       - intent: ask_details
         entities:
-          - subtopic_name: "Hiệu ứng Miller"
+          - subtopic_name: "Do loi vi sai voi tai CMOS"
       - action: action_fetch_subtopic_details_description
 
   - story: Người dùng hỏi về mối quan hệ của subtopic
     steps:
       - intent: ask_characteristics
         entities:
-          - subtopic_name: "Hiệu ứng Miller"
+          - subtopic_name: "Do loi vi sai voi tai CMOS"
       - action: action_fetch_subtopic_characteristics
+      - intent: ask_example
+        entities:
+          - subtopic_name: "Anh huong cua tai"
+      - action: action_fetch_example_details
 
   - story: Người dùng hỏi về ví dụ cụ thể của subtopic
     steps:
       - intent: ask_example
         entities:
-          - subtopic_name: "Hiệu ứng Miller"
+          - subtopic_name: "Do loi vi sai voi tai CMOS"
       - action: action_fetch_example_details
+
+  - story: Fallback khi không hiểu ý định
+    steps:
+      - intent: nlu_fallback #chatbot khong chac chan ve y dinh nguoi dung
+      - action: action_default_fallback
+
+  - story: Fallback khi không có dữ liệu
+    steps:
+      - intent: out_of_scope #ngoai pham vi chatbot duoc huan luyen
+      - action: action_default_fallback

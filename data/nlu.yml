@@ -27,42 +27,42 @@ nlu:
 
 - intent: ask_topics
   examples: |
-    - Tôi muốn tìm hiểu về [Hieu ung Miller](topic_name)
-    - Nói cho tôi về [Dap ung tan so cua mach Cascode](topic_name)
-    - Giải thích [Mach khuech dai bam nguon (Source follower)](topic_name)
-    - Hãy cho tôi thông tin về [Guong dong co ban](topic_name)
-    - [Mo hinh tin hieu nho cua MOSFET](topic_name) là gì
-    - [Dap ung tan so cua mach vi sai](topic_name) nói về điều gì
+    - Tôi muốn tìm hiểu về [Guong dong co ban](topic_name)
+    - Nói cho tôi về [Cong nghe CMOS](topic_name)
+    - Giải thích về [Tin hieu va Nhieu trong thiet ke](topic_name)
+    - Chủ đề [Mach khuech dai](topic_name) là gì?
+    - [Cau truc Mosfet](topic_name), hãy nói chi tiết
 
 - intent: ask_subtopic
   examples: |
-    - Tôi muốn tìm hiểu về [Hiệu ứng Miller](subtopic_name)
-    - Nói cho tôi về [Đáp ứng tần số của mạch vi sai](subtopic_name)
-    - Giải thích về [Phân tích nhiễu trong mạch điện](subtopic_name)
+    - Nói cho tôi về [Do loi dien ap](subtopic_name)
+    - Tiểu chủ đề [Phan tich tin hieu lon va nho](subtopic_name) trong MOSFET là gì?
+    - Giải thích về [Dong dien trong guong dong co ban](subtopic_name)
+    - [On dinh dong dien vơi VGS](subtopic_name) là gì?
 
 - intent: ask_conditions
   examples: |
-    - Điều kiện của [Hiệu ứng Miller](subtopic_name) là gì?
-    - Hãy nói điều kiện của [mạch khuếch đại nguồn chung](subtopic_name).
+    - Điều kiện của [Sai so dong trong Wilson](subtopic_name) là gì?
+    - Hãy nói điều kiện của [On dinh dong dien voi VGS](subtopic_name).
 
 - intent: ask_details
   examples: |
-    - Mô tả kỹ hơn về [Hiệu ứng Miller](subtopic_name).
-    - Hãy giải thích chi tiết về [mạch khuếch đại nguồn chung](subtopic_name).
+    - Mô tả kỹ hơn về [Mo hinh nhieu flicker](subtopic_name).
+    - Hãy giải thích chi tiết về [Tan so cat cao trong CS](subtopic_name).
 
 - intent: ask_characteristics
   examples: |
-    - Mối quan hệ của [Hiệu ứng Miller](subtopic_name) là gì?
+    - Mối quan hệ của [Tan so cat thap trong CS](subtopic_name) là gì?
     - Mối quan tâm trong [Đáp ứng tần số của mạch vi sai](subtopic_name) là gì?
 
 - intent: ask_application
   examples: |
-    - Ứng dụng của [Hiệu ứng Miller](subtopic_name) là gì?
-    - Hãy nói về ứng dụng của [mạch khuếch đại nguồn chung](subtopic_name).
-    - Tôi muốn hỏi về ứng dụng của [Đáp ứng tần số của mạch vi sai](subtopic_name).
+    - Ứng dụng của [Cuc va khong diem trong ham truyen](subtopic_name) là gì?
+    - Hãy nói về ứng dụng của [Hieu ung Miller va dien dung ky sinh](subtopic_name).
+    - Tôi muốn hỏi về ứng dụng của [Dap ung tan so trong mach vi sai](subtopic_name).
 
 - intent: ask_example
   examples: |
-    - Tôi muốn biết ví dụ cụ thể về [Hiệu ứng Miller](subtopic_name).
-    - Hãy nói cho tôi về ví dụ của [mạch khuếch đại nguồn chung](subtopic_name).
-    - Ví dụ nào minh họa cho [Đáp ứng tần số của mạch vi sai](subtopic_name)?
+    - Tôi muốn biết ví dụ cụ thể về [Mach hoi tiep duong va hysteresis](subtopic_name).
+    - Hãy nói cho tôi về ví dụ của [Nhieu nhiet trong dien tro](subtopic_name).
+    - Ví dụ nào minh họa cho [Do loi che do chung (CMRR)](subtopic_name)?

@@ -59,7 +59,6 @@ class ActionFetchTopicDetails(Action):
         return "action_fetch_topic_details"
 
     def run(self, dispatcher, tracker, domain):
-        # Lấy topic_name từ slot
         topic_name = tracker.get_slot("topic_name")
 
         if not topic_name:
@@ -67,54 +66,30 @@ class ActionFetchTopicDetails(Action):
             return []
 
         try:
-            # Kết nối MySQL
             conn = pymysql.connect(
-                host="localhost",
-                user="root",
-                password="1234",
-                database="analogcmos"
+                host="localhost", user="root", password="1234", database="analogcmos"
             )
             cursor = conn.cursor()
 
-            # Truy vấn tất cả các chủ đề từ bảng topics để tìm kiếm gần đúng
-            query_all_topics = "SELECT Name FROM topics"
-            cursor.execute(query_all_topics)
-            all_topics = [row[0] for row in cursor.fetchall()]
+            # Tìm kiếm trong bảng topics
+            query_topic = "SELECT Name, Description FROM topics WHERE lower(Name) = %s"
+            cursor.execute(query_topic, (topic_name.lower(),))
+            topic_result = cursor.fetchone()
 
-            # Sử dụng fuzzy matching để tìm chủ đề phù hợp nhất
-            best_match = process.extractOne(topic_name, all_topics, scorer=fuzz.token_sort_ratio)
+            if topic_result:
+                name, description = topic_result
+                response = f"Chi tiết về chủ đề '{name}': {description}\n\n"
+                # Truy vấn các subtopics trong chủ đề
+                query_subtopics = "SELECT Name FROM subtopics WHERE Topic_id = (SELECT topic_id FROM topics WHERE Name = %s)"
+                cursor.execute(query_subtopics, (name,))
+                subtopics = [row[0] for row in cursor.fetchall()]
 
-            if best_match and best_match[1] >= 90:  # Ngưỡng độ chính xác 80%
-                matched_topic_name = best_match[0]
-
-                # Truy vấn chi tiết về chủ đề khớp
-                query_topic = "SELECT topic_id, Description FROM topics WHERE Name = %s"
-                cursor.execute(query_topic, (matched_topic_name,))
-                topic_result = cursor.fetchone()
-
-                if topic_result:
-                    topic_id, description = topic_result
-                    response = f"Chi tiết về chủ đề '{matched_topic_name}': {description}\n\n"
-                else:
-                    response = f"Tôi không tìm thấy thông tin cho chủ đề '{matched_topic_name}'."
-                    dispatcher.utter_message(text=response)
-                    return []
-
-                # Truy vấn danh sách subtopics trong topic
-                query_subtopics = "SELECT Name FROM subtopics WHERE Topic_id = %s"
-                cursor.execute(query_subtopics, (topic_id,))
-                subtopics_result = cursor.fetchall()
-
-                # Gợi ý câu hỏi dựa trên danh sách subtopics
-                if subtopics_result:
-                    subtopic_names = [row[0] for row in subtopics_result]
+                if subtopics:
                     response += "Bạn muốn tìm hiểu thêm về tiểu chủ đề nào? Ví dụ:\n"
-                    for i, subtopic in enumerate(subtopic_names, start=1):
-                        response += f"- {i}. {subtopic}\n"
-                else:
-                    response += "Hiện không có tiểu chủ đề nào được liên kết với chủ đề này."
+                    for subtopic in subtopics:
+                        response += f"- {subtopic}\n"
             else:
-                response = f"Tôi không tìm thấy chủ đề phù hợp với '{topic_name}'. Bạn có thể thử nhập lại tên khác."
+                response = f"Tôi không tìm thấy thông tin về chủ đề '{topic_name}'."
 
         except pymysql.Error as e:
             response = f"Lỗi truy vấn cơ sở dữ liệu: {str(e)}"
@@ -130,8 +105,8 @@ class ActionFetchSubtopicDetails(Action):
         return "action_fetch_subtopic_details"
 
     def run(self, dispatcher, tracker, domain):
-        # Lấy subtopic_name từ slot
         subtopic_name = tracker.get_slot("subtopic_name")
+        response = "Hiện tại tôi không thể tìm thấy thông tin phù hợp."  # Giá trị mặc định
 
         if not subtopic_name:
             dispatcher.utter_message(text="Tôi không nhận được thông tin về tiểu chủ đề bạn muốn hỏi.")
@@ -147,64 +122,42 @@ class ActionFetchSubtopicDetails(Action):
             )
             cursor = conn.cursor()
 
-            # Truy vấn tất cả subtopics để fuzzy matching
+            # Lấy tất cả subtopics để fuzzy matching
             query_all_subtopics = "SELECT Name FROM subtopics"
             cursor.execute(query_all_subtopics)
-            all_subtopics = [row[0] for row in cursor.fetchall()]
+            all_subtopics = [row[0].lower() for row in cursor.fetchall()]
 
-            # Tìm subtopic gần đúng
-            best_match = process.extractOne(subtopic_name, all_subtopics, scorer=fuzz.token_sort_ratio)
+            # Fuzzy matching với ngưỡng 80%
+            matched_subtopic = process.extractOne(subtopic_name.lower(), all_subtopics, scorer=fuzz.token_sort_ratio)
 
-            if best_match and best_match[1] >= 80:  # Ngưỡng độ chính xác 80%
-                matched_subtopic_name = best_match[0]
+            if matched_subtopic and matched_subtopic[1] >= 80:
+                matched_name = matched_subtopic[0]
 
-                # Truy vấn chi tiết về subtopic
-                query_subtopic = "SELECT subtopic_id, Description FROM subtopics WHERE lower(Name) LIKE lower(%s)"
-                cursor.execute(query_subtopic, (f"%{subtopic_name}%",))
+                # Truy vấn chi tiết subtopic
+                query_subtopic = "SELECT Name, Description FROM subtopics WHERE LOWER(Name) = %s"
+                cursor.execute(query_subtopic, (matched_name,))
                 subtopic_result = cursor.fetchone()
 
                 if subtopic_result:
-                    subtopic_id, description = subtopic_result
-                    response = f"Chi tiết về tiểu chủ đề '{subtopic_name}': {description}\n\n"
-                else:
-                    response = f"Tôi không tìm thấy thông tin cho tiểu chủ đề '{subtopic_name}'."
-                    dispatcher.utter_message(text=response)
-                    return []
-
-                # Truy vấn từ bảng details
-                query_details = "SELECT Description, Conditions, Characteristics FROM details WHERE Subtopic_id = %s"
-                cursor.execute(query_details, (subtopic_id,))
-                details_result = cursor.fetchone()
-
-                if details_result:
-                    detail_desc, conditions, characteristics = details_result
+                    name, description = subtopic_result
+                    response = f"Chi tiết về tiểu chủ đề '{name}': {description}\n\n"
                     response += (
-                        f"Bạn có thể hỏi thêm:\n"
-                        f"1. Mô tả kỹ hơn: {detail_desc}\n"
-                        f"2. Điều kiện: {conditions}\n"
-                        f"3. Mối quan hệ cần quan tâm: {characteristics}\n"
+                        "Bạn có muốn biết thêm về:\n"
+                        "- Mô tả chi tiết hơn\n"
+                        "- Điều kiện\n"
+                        "- Mối quan hệ quan tâm\n"
+                        "- Ứng dụng\n"
+                        "Của tiểu chủ đề đúng không?"
                     )
-                else:
-                    response += "Hiện không có thông tin chi tiết về tiểu chủ đề này.\n"
-
-                # Gợi ý nếu người dùng hỏi về ví dụ cụ thể hoặc ứng dụng
-                if "Mối quan hệ cần quan tâm" in response:
-                    query_examples = "SELECT Example_description, Application FROM examples WHERE Detail_id = %s"
-                    cursor.execute(query_examples, (subtopic_id,))
-                    examples_result = cursor.fetchall()
-
-                    if examples_result:
-                        response += "Bạn có thể hỏi thêm:\n"
-                        for example_desc, application in examples_result:
-                            response += f"- Ví dụ cụ thể: {example_desc}\n"
-                            response += f"- Ứng dụng: {application}\n"
-                else:
-                    response += "Không có ví dụ hoặc ứng dụng liên quan.\n"
             else:
-                response += "Không có thông tin thêm.\n"
+                # Gợi ý subtopics gần đúng
+                suggestions = process.extract(subtopic_name.lower(), all_subtopics, scorer=fuzz.token_sort_ratio, limit=3)
+                suggestion_text = "\n".join([f"- {suggestion[0]}" for suggestion in suggestions])
+                response = f"Tôi không tìm thấy tiểu chủ đề '{subtopic_name}'. Bạn có thể thử các tên gần đúng sau:\n{suggestion_text}"
 
         except pymysql.Error as e:
             response = f"Lỗi truy vấn cơ sở dữ liệu: {str(e)}"
+
         finally:
             if 'conn' in locals():
                 conn.close()
@@ -409,7 +362,6 @@ class ActionFetchSubtopicDetailsDescription(Action):
         dispatcher.utter_message(text=response)
         return []
 
-
 class ActionFetchSubtopicCharacteristics(Action):
     def name(self):
         return "action_fetch_subtopic_characteristics"
@@ -551,4 +503,12 @@ class ActionFetchExampleDetails(Action):
                 conn.close()
 
         dispatcher.utter_message(text=response)
+        return []
+
+class ActionDefaultFallback(Action):
+    def name(self):
+        return "action_default_fallback"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message(text="Xin lỗi, tôi không hiểu câu hỏi của bạn. Bạn có thể thử hỏi lại hoặc cung cấp thêm thông tin chi tiết.")
         return []
